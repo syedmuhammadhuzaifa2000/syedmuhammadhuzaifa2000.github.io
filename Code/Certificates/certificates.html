@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SM Huzaifa</title>
+
+  <link rel="icon" type="image/png" href="/Images/website-ICON/favicon.png">
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Layout CSS -->
+  <link href="/Code/Layout/layout.css" rel="stylesheet">
+  <link href="/Code/Certificates/certificates.css" rel="stylesheet">
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <!-- Page Background -->
+  <style>
+  body {
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../Images/Background-Photos/bg-certificate.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+</style>
+
+
+</head>
+
+<body>
+
+  <!-- Shared layout loads here -->
+  <div id="nav-container"></div>
+  
+<main class="page-content certificates-page">
+ <section>
+  <div>
+    <h1 id="Certi-heading">Certificates</h1>
+    <div id="certificate-slider" class="certificate-slider">
+      <img src="../../Images/Certificates/certi1.png" alt="Certificate 1" class="active" />
+      <img src="../../Images/Certificates/certi2.png" alt="Certificate 2" />
+      <img src="../../Images/Certificates/certi3.png" alt="Certificate 3" />
+      <img src="../../Images/Certificates/Certificate-4.jpg" alt="Certificate 4" />
+    </div>
+  </div>
+</section>
+
+<div id="certificates"></div> <!--Margain to push down the footer -->
+
+</main>
+
+
+<div id="footer-container"></div>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Layout JS -->
+  <script src="/Code/Layout/layout.js"></script>
+  <script src="/Code/Certificates/certificates.js"></script>
+
+  <!-- Fetch shared layout -->
+ <script>
+  fetch("/Code/Layout/layout.html")
+    .then(r => {
+      if (!r.ok) throw new Error("Failed to load layout.html");
+      return r.text();
+    })
+    .then(html => {
+      const temp = document.createElement("div");
+      temp.innerHTML = html;
+
+      // Inject NAVBARS
+      document.getElementById("nav-container").append(
+        temp.querySelector(".top-navbar"),
+        temp.querySelector(".side-navbar")
+      );
+
+      // Inject FOOTER
+      document.getElementById("footer-container").append(
+        temp.querySelector(".footer")
+      );
+
+      // Inject POPUPS + MODALS into body
+      document.body.appendChild(temp.querySelector("#cnicPopup"));
+      temp.querySelectorAll(".modal").forEach(m => document.body.appendChild(m));
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+</body>
+</html>

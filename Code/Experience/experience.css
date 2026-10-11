@@ -1,0 +1,109 @@
+/*-----------Experience CSS------------*/
+
+.experience-page {
+  padding-top: 90px;
+  padding-bottom: 10px;
+
+  max-width: 1000px;   /* ✅ wider content */
+  margin: 0 auto;     /* ✅ center horizontally */
+}
+
+
+.experience-title {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  color: #ffffff;
+  padding-bottom: 0%;
+
+  border-bottom: 1px solid #000000;
+  display: inline-block;
+  margin-bottom: 0px;
+
+  text-shadow: 0 4px 14px rgba(0,0,0,0.6);
+}
+
+.loading-dots {
+  display: inline-flex;
+  margin-left: 6px;
+}
+
+.loading-dots span {
+  font-size: inherit;
+  font-weight: inherit;
+  opacity: 0;
+  animation: dotPulse 1.5s infinite;
+}
+
+/* stagger animation */
+.loading-dots span:nth-child(1) { animation-delay: 0s; }
+.loading-dots span:nth-child(2) { animation-delay: 0.2s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes dotPulse {
+  0%   { opacity: 0; transform: translateY(0); }
+  30%  { opacity: 1; transform: translateY(-3px); }
+  60%  { opacity: 0; transform: translateY(0); }
+}
+
+.experience-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 32px;        /* ✅ more breathing room */
+  margin-bottom: 10px;
+
+  box-shadow: 0 14px 40px rgba(0,0,0,0.18);
+}
+
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.experience-header h5 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.15rem;    /* ✅ clearer role title */
+}
+
+.experience-date {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.experience-card p {
+  font-size: 0.95rem;    /* ✅ easier to read */
+  line-height: 1.6;
+}
+
+
+.experience-tags {
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+/* Company + role alignment */
+.experience-company {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Logo styling */
+.company-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+
+  border-radius: 50%;
+  background: #fff;
+
+  padding: 4px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}

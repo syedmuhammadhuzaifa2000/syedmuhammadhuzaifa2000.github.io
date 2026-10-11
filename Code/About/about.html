@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SM Huzaifa</title>
+
+  <link rel="icon" type="image/png" href="/Images/website-ICON/favicon.png">
+
+  <link rel="preload" as="image" href="/Images/Background-Photos/bg-home.jpeg">
+
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Layout CSS -->
+  <link href="../Layout/layout.css" rel="stylesheet">
+  <link href="about.css" rel="stylesheet">
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <!-- Page Background -->
+  <style>
+  body {
+    background-image: url("../../Images/Background-Photos/bg-about.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+</style>
+
+
+</head>
+
+<body>
+
+  <!-- Shared layout loads here -->
+  <div id="nav-container"></div>
+
+<main class="page-content">
+  <section class="about-card container">
+
+    <!-- ABOUT HEADER -->
+    <div class="row align-items-center mb-4">
+      <div class="col-md-3 text-center">
+        <img src="../../Images/Profile/Untitled.jpg" alt="Profile" class="about-avatar">
+      </div>
+      <div class="col-md-9">
+        <h2 class="about-title">Assalamu Alaikum</h2>
+        <p class="about-summary">
+          I am a dedicated and results-driven Industrial Electronics Engineer with a
+          Bachelor’s degree from <strong>NED University of Engineering & Technology</strong>.
+          I am passionate about automation, control systems, and building practical
+          engineering solutions. <br>I have hands-on experience working with Honeywell DCS,
+          Siemens /& Delta PLCs, and industrial communication protocols such as
+          Modbus. I have also worked on SCADA systems including Reliance 4, focusing on
+          system integration, monitoring, and control. <br>
+          I enjoy translating complex requirements into stable, real-world automation
+          solutions that perform consistently in operational environments.
+
+        </p>
+      </div>
+    </div>
+
+    <!-- TECHNICAL EXPERTISE -->
+    <div class="mb-5">
+      <h4 class="section-heading">Technical Expertise</h4>
+     <div class="row text-center expertise-icons">
+  <div class="col-6 col-md-4 col-lg-2">
+    <i class="fas fa-microchip"></i>
+    <p>PLC Programming</p>
+  </div>
+
+  <div class="col-6 col-md-4 col-lg-2">
+    <i class="fas fa-desktop"></i>
+    <p>Honeywell Experion</p>
+  </div>
+
+  <div class="col-6 col-md-4 col-lg-2">
+    <i class="fas fa-code"></i>
+    <p>MATLAB / Simulink</p>
+  </div>
+
+  <div class="col-6 col-md-4 col-lg-2">
+    <i class="fas fa-ruler-combined"></i>
+    <p>Laser-Based Measurement</p>
+  </div>
+
+  <div class="col-6 col-md-4 col-lg-2">
+    <i class="fas fa-network-wired"></i>
+    <p>Networking</p>
+  </div>
+
+  <div class="col-6 col-md-4 col-lg-2">
+    <i class="fas fa-chart-line"></i>
+    <p>SCADA</p>
+  </div>
+</div>
+
+
+    <!-- EDUCATION & EXPERIENCE -->
+    <div class="mb-4">
+      <h4 class="section-heading">Education & Experience Timeline</h4>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+          <div class="timeline-content">
+            <h6>Automators (Pvt) Ltd. — Systems Engineer</h6>
+            <p>August 2025 – Present</p>
+          </div>
+
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+          <div class="timeline-content">
+            <h6>Automators (Pvt) Ltd. — Trainee Engineer</h6>
+            <p>May 2025 – August 2025</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+          <div class="timeline-content">
+            <h6>Pakitex Boards (Pvt) Ltd. — Intern</h6>
+            <p>April 2024 – May 2024</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+          <div class="timeline-content">
+            <h6>SAF Internatinal (Pvt.) Ltd. — Intern</h6>
+            <p>Oct 2023 – Nov 2023</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="timeline-content">
+            <h6>NED University of Engineering & Technology</h6>
+            <p>Bachelor’s in Industrial Electronics</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- LANGUAGES -->
+    <p class="about-footer-text">
+      Fluent in Urdu, proficient in English, and conversational in Chinese (HSK II).
+      I thrive in collaborative environments that demand innovation and attention to detail.
+    </p>
+
+  </section>
+
+  
+</main>
+
+<div id="footer-container"></div>
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Layout JS -->
+  <script src="/Code/Layout/layout.js"></script>
+
+  <!-- Fetch shared layout -->
+ <script>
+  fetch("../Layout/layout.html")
+    .then(r => {
+      if (!r.ok) throw new Error("Failed to load layout.html");
+      return r.text();
+    })
+    .then(html => {
+      const temp = document.createElement("div");
+      temp.innerHTML = html;
+
+      // Inject NAVBARS
+      document.getElementById("nav-container").append(
+        temp.querySelector(".top-navbar"),
+        temp.querySelector(".side-navbar")
+      );
+
+      // Inject FOOTER
+      document.getElementById("footer-container").append(
+        temp.querySelector(".footer")
+      );
+
+      // Inject POPUPS + MODALS into body
+      document.body.appendChild(temp.querySelector("#cnicPopup"));
+      temp.querySelectorAll(".modal").forEach(m => document.body.appendChild(m));
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+</body>
+</html>

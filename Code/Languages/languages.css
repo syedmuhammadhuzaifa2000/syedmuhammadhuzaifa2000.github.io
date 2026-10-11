@@ -1,0 +1,136 @@
+/* ===== LANGUAGES ===== */
+
+/* ===============================
+   LANGUAGES PAGE
+================================ */
+
+.languages-page {
+  padding: 90px 20px 120px;
+}
+
+.languages-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 50px;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+/* ===============================
+   GRID
+================================ */
+
+.languages-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* ===============================
+   DONUT CARD
+================================ */
+
+.donut-card {
+  position: relative;
+  width: 220px;
+  text-align: center;
+}
+
+/* ===============================
+   SVG DONUT
+================================ */
+
+.donut {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;          /* 🔴 THIS IS IMPORTANT */
+  transform: rotate(-90deg);
+}
+
+
+/* Background ring */
+.donut-bg {
+  fill: none;
+  stroke: rgba(255,255,255,0.25);
+  stroke-width: 12;
+}
+
+/* Active ring */
+.donut-ring {
+  fill: none;
+  stroke: #0d6efd;
+  stroke-width: 12;
+  stroke-linecap: round;
+
+  stroke-dasharray: 302;
+  stroke-dashoffset: 80; /* change per donut */
+}
+
+/* ===============================
+   CENTER DISC
+================================ */
+
+.donut-core {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.95);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+
+.donut-core h6 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+}
+
+.donut-core p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #444;
+}
+
+/* ===============================
+   LABELS
+================================ */
+
+.donut-label {
+  margin-top: 14px;
+  padding: 6px 14px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  backdrop-filter: blur(6px);
+}
+
+/* ===============================
+   COLOR THEMES (optional)
+================================ */
+
+.donut.blue .donut-ring { stroke: #0d6efd; }
+.donut.cyan .donut-ring { stroke: #00bcd4; }
+.donut.teal .donut-ring { stroke: #80deea; }
+
+main.page-content.languages-page {
+  min-height: 100vh;
+  flex-shrink: 0;
+}

@@ -1,0 +1,154 @@
+<!-- ================= TOP NAVBAR ================= -->
+<div class="top-navbar">
+  <button class="menu-btn" onclick="toggleSideNav()" aria-label="Toggle Navigation">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="welcome-text">Welcome</div>
+
+  <nav class="top-nav-links">
+    <a href="/Code/Home/home.html">Home</a>
+    <a href="/Code/About/about.html">About</a>
+    <a href="/Code/Experience/experience.html">Experience</a>
+    <a href="/Code/Education/education.html">Education</a>
+    <a href="/Code/Skills/skills.html">Skills</a>
+    <a href="/Code/Projects/projects.html">Projects</a>
+    <a href="/Code/Languages/languages.html">Languages</a>
+    <a href="/Code/Certificates/certificates.html">Certificates</a>
+  </nav>
+</div>
+
+<!-- ================= SIDE NAVBAR ================= -->
+<div class="side-navbar" id="sideNav">
+  <button class="close-btn" onclick="toggleSideNav()" aria-label="Close Navigation">
+    <i class="fas fa-arrow-left"></i>
+  </button>
+
+  <div class="profile">
+    <img src="../../Images/Profile/Untitled.jpg" alt="Profile">
+    <h3>SM Huzaifa</h3>
+  </div>
+
+  <nav class="side-nav-links">
+    <a href="/Code/About/about.html">About Me</a>
+   <a href="/Code/Experience/experience.html">Experience</a>
+    <a href="/Code/Education/education.html">Education</a>
+    <a href="/Code/Skills/skills.html">Skills</a>
+    <a href="/Code/Projects/projects.html">Projects</a>
+    <a href="/Code/Languages/languages.html">Languages</a>
+    <a href="/Code/Certificates/certificates.html">Certificates</a>
+  </nav>
+
+  <div class="side-social">
+    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:syedmuhammadhuzaifa2000@gmail.com"><i class="fas fa-envelope"></i></a>
+    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<div class="footer">
+  <div class="footer-content">
+
+    <div class="footer-section">
+      <h3>📬 Contact Information</h3>
+      <ul>
+        <li ><img src="https://img.icons8.com/ios-filled/16/ffffff/email-open.png">
+          <a href="mailto:syedmuhammadhuzaifa2000@gmail.com">syedmuhammadhuzaifa2000@gmail.com</a>
+        </li>
+        <li><img src="https://img.icons8.com/ios-filled/16/ffffff/email-open.png">
+          <a href="mailto:huzaifa@automators.com.pk">huzaifa@automators.com.pk</a>
+        </li>
+        <li><img src="https://img.icons8.com/ios-filled/16/ffffff/phone.png">
+          <a href="tel:+923321304560">+92 332 1304560</a>
+        </li>
+        <li><img src="https://img.icons8.com/ios-filled/16/ffffff/identification-documents.png">
+          <a href="javascript:void(0);" onclick="openCnicPopup()">42201-1960891-1</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>💳 Bank Details</h3>
+      <ul>
+        <li>Habib-Metro:
+          <a href="#" data-bs-toggle="modal" data-bs-target="#qrHabib">PK45MPBL*****</a>
+        </li>
+        <li>Faysal:
+          <a href="#" data-bs-toggle="modal" data-bs-target="#qrFaysal">PK22FAYS*****</a>
+        </li>
+        <li>Easy Paisa:
+          <a href="#" data-bs-toggle="modal" data-bs-target="#qrEasypaisa">PK85TMFB*****</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>📄 My Credentials</h3>
+      <ul>
+        <li><a href="../../CV/CV.pdf" download>Resume</a></li>
+        <li><a href="portfolio.pdf" download>Portfolio</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Syed Muhammad Huzaifa. All rights reserved.
+  </div>
+</div>
+
+<!-- ================= CNIC POPUP ================= -->
+<div id="cnicPopup" class="cnic-popup">
+  <div class="cnic-popup-content">
+    <button class="close-popup" onclick="closeCnicPopup()">×</button>
+    <h5>My CNIC</h5>
+    <div class="cnic-imgs">
+      <img src="../../Images/CNIC/CNIC_Front.jpg">
+      <img src="../../Images/CNIC/CNIC_Back.jpg">
+    </div>
+  </div>
+</div>
+
+<!-- ================= BANK MODALS (BOOTSTRAP) ================= -->
+<div class="modal fade" id="qrHabib" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Scan to Pay – Habib Metro</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="../../Images/QR_Codes/qr-metro.jpg" class="modal-img">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="qrFaysal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Scan to Pay – Faysal</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="../../Images/QR_Codes/qr-faysal.jpg" class="modal-img">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="qrEasypaisa" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Scan to Pay – Easy Paisa</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="../../Images/QR_Codes/qr-easypaisa.jpg" class="modal-img">
+      </div>
+    </div>
+  </div>
+</div>

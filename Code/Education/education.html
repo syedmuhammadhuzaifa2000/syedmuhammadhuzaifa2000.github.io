@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SM Huzaifa</title>
+
+  <link rel="icon" type="image/png" href="/Images/website-ICON/favicon.png">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Layout CSS -->
+  <link href="/Code/Layout/layout.css" rel="stylesheet">
+  <link href="/Code/Education/education.css" rel="stylesheet">
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <!-- Page Background -->
+  <style>
+  body {
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../Images/Background-Photos/bg-Education.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+</style>
+
+
+</head>
+
+<body>
+
+  <!-- Shared layout loads here -->
+  <div id="nav-container"></div>
+
+<main class="page-content education-page">
+
+  <section class="education-wrapper">
+    <h1 class="education-title">Education</h1>
+
+    <div class="education-slider">
+
+      <!-- SLIDE 1 -->
+      <div class="education-slide active">
+        <div class="edu-content">
+          <div class="edu-text">
+            <h3>NED University of Engineering & Technology, Karachi</h3>
+            <p><strong>Bachelor of Engineering (BE)</strong> – Industrial Electronics</p>
+            <ul>
+              <li>Final Year Project: Real-time Energy Monitoring using Siemens PLC & Node-RED</li>
+              <li>PLC programming & Industrial Communication expertise</li>
+              <li>Automation competitions & technical seminars</li>
+            </ul>
+          </div>
+          <img src="../../Images/logos/NED-logo.png" class="edu-logo" alt="NED Logo">
+        </div>
+      </div>
+
+      <!-- SLIDE 2 -->
+      <div class="education-slide">
+        <div class="edu-content">
+          <div class="edu-text">
+            <h3>College For Men, Karachi</h3>
+            <p><strong>Intermediate (BIEK)</strong> – Pre-Engineering</p>
+            <ul>
+              <li>Distinction in Mathematics & Physics</li>
+              <li>Science exhibition team member</li>
+              <li>Hands-on physics circuitry projects</li>
+            </ul>
+          </div>
+          <img src="../../Images/logos/College-logo.png" class="edu-logo" alt="College Logo">
+        </div>
+      </div>
+
+      <!-- SLIDE 3 -->
+      <div class="education-slide">
+        <div class="edu-content">
+          <div class="edu-text">
+            <h3>Falcon House Grammar School, Karachi</h3>
+            <p><strong>Matriculation (BSEK)</strong> – Science</p>
+            <ul>
+              <li>A-Grade academic performance</li>
+              <li>2nd position in inter-school science fair</li>
+              <li>Early electronics interest via DIY kits</li>
+            </ul>
+          </div>
+          <img src="../../Images/logos/FHGS-logo.png" class="edu-logo" alt="School Logo">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CONTROLS -->
+    <div class="edu-controls">
+      <button id="prevEdu">‹</button>
+      <div class="edu-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <button id="nextEdu">›</button>
+    </div>
+
+  </section>
+</main>
+
+
+
+<div id="footer-container"></div>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Layout JS -->
+  <script src="/Code/Layout/layout.js"></script>
+
+  <!--Education Script-->
+  <script src="education.js"></script>
+
+  <!-- Fetch shared layout -->
+ <script>
+  fetch("/Code/Layout/layout.html")
+    .then(r => {
+      if (!r.ok) throw new Error("Failed to load layout.html");
+      return r.text();
+    })
+    .then(html => {
+      const temp = document.createElement("div");
+      temp.innerHTML = html;
+
+      // Inject NAVBARS
+      document.getElementById("nav-container").append(
+        temp.querySelector(".top-navbar"),
+        temp.querySelector(".side-navbar")
+      );
+
+      // Inject FOOTER
+      document.getElementById("footer-container").append(
+        temp.querySelector(".footer")
+      );
+
+      // Inject POPUPS + MODALS into body
+      document.body.appendChild(temp.querySelector("#cnicPopup"));
+      temp.querySelectorAll(".modal").forEach(m => document.body.appendChild(m));
+    })
+    .catch(err => console.error(err));
+</script>
+
+
+</body>
+</html>

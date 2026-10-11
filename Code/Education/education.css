@@ -1,0 +1,175 @@
+/* ===== EDUCATION ===== */
+
+.education-section {
+  display: flex;
+  justify-content: center;
+  padding: 90px 20px;
+}
+
+.education-card {
+  max-width: 1000px;
+  width: 100%;
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 50px 60px;
+}
+
+.edu-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.edu-content {
+  position: relative;
+  min-height: 280px;
+}
+
+.edu-slide {
+  display: none;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.edu-slide.active {
+  display: flex;
+  animation: fadeSlide 0.6s ease;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.edu-text {
+  max-width: 700px;
+}
+
+.edu-text h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.edu-degree {
+  margin-bottom: 18px;
+}
+
+.edu-logo {
+  width: 90px;
+  opacity: 0.9;
+}
+
+.edu-controls {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.edu-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.edu-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.edu-dot {
+  width: 10px;
+  height: 10px;
+  background: #aaa;
+  border-radius: 50%;
+}
+
+.edu-dot.active {
+  background: #000;
+}
+
+/*------------------Education CSS-------------------*/
+
+.education-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 30px;
+}
+
+.education-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.education-slide {
+  display: none;
+}
+
+.education-slide.active {
+  display: block;
+  animation: fadeSlide 0.5s ease;
+}
+
+.edu-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 18px;
+  padding: 40px;
+}
+
+.edu-logo {
+  width: 160px;   /* 👈 BIGGER LOGO */
+  height: auto;
+}
+
+.edu-controls {
+  margin-top: 30px;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.edu-controls button {
+  width: 45px;
+  height: 45px;
+  color: #fff;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.edu-dots .dot {
+  width: 8px;
+  height: 8px;
+  background: #aaa;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.edu-dots .dot.active {
+  background: #000;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateX(10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
