@@ -1,51 +1,30 @@
-document.querySelectorAll(".project-item").forEach(card => {
-  card.addEventListener("click", () => {
-
-    // Prevent double loading
-    if (card.querySelector("video")) return;
-
-    const videoSrc = card.dataset.video;
-
-    card.innerHTML = `
-      <video class="project-video" controls autoplay>
-        <source src="${videoSrc}" type="video/mp4">
-      </video>
-    `;
-  });
-});
-
-document.querySelectorAll(".project-item").forEach(card => {
-  const videoSrc = card.dataset.video;
+// Only cards with a data-video attribute can open a video.
+document.querySelectorAll(".project-item[data-video]").forEach(card => {
   const video = card.querySelector("video");
   const closeBtn = card.querySelector(".close-video");
+  if (!video || !closeBtn) return;
 
-  // OPEN VIDEO
-  card.addEventListener("click", e => {
-    // prevent reopening when clicking close
-    if (e.target.classList.contains("close-video")) return;
+  function closeVideo() {
+    video.pause();
+    video.removeAttribute("src");
+    video.load();
+    card.classList.remove("active");
+  }
 
-    // close other open cards
-    document.querySelectorAll(".project-item.active").forEach(open => {
-      if (open !== card) {
-        open.classList.remove("active");
-        const v = open.querySelector("video");
-        v.pause();
-        v.src = "";
-      }
-    });
-
-    // open this card
+  card.addEventListener("click", event => {
+    // Native video controls and an already-open player must not restart playback.
+    if (event.target.closest(".project-video") || card.classList.contains("active")) return;
     card.classList.add("active");
-    video.src = videoSrc;
-    video.play();
+    video.src = card.dataset.video;
+    video.play().catch(() => {
+      // Leave the native controls available if the browser blocks autoplay.
+    });
   });
 
-  // CLOSE VIDEO
-  closeBtn.addEventListener("click", e => {
-    e.stopPropagation();
-    card.classList.remove("active");
-    video.pause();
-    video.src = "";
+  closeBtn.type = "button";
+  closeBtn.setAttribute("aria-label", "Close project video");
+  closeBtn.addEventListener("click", event => {
+    event.stopPropagation();
+    closeVideo();
   });
 });
-

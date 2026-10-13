@@ -105,3 +105,13 @@
   padding-left: 18px;
 }
 
+
+
+.skill-card-front,
+.skill-card-back {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow:
+    inset 0 0 12px rgba(255, 255, 255, 0.25),
+    inset 0 0 28px rgba(255, 255, 255, 0.12);
+}

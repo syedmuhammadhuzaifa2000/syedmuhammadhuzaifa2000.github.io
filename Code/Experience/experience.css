@@ -107,3 +107,21 @@
 
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
+
+/* Purple year badge */
+.badge-purple {
+  background-color: #7c3aed;
+  color: #fff;
+}
+
+/* Space between the company heading and description */
+.experience-header {
+  margin-bottom: 16px;
+}
+
+.badge-color-1 { background-color: #0099cc; color: #fff; } /* Blue */
+.badge-color-2 { background-color: #603399; color: #fff; } /* Purple */
+.badge-color-3 { background-color: #c00070; color: #fff; } /* Magenta */
+.badge-color-4 { background-color: #ed0025; color: #fff; } /* Red */
+.badge-color-5 { background-color: #f56600; color: #fff; } /* Orange */
+.badge-color-6 { background-color: #198754; color: #fff; } /* Green */ 

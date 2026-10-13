@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>SM Huzaifa</title>
 
-<link rel="icon" type="image/png" href="/Images/Website-ICON/favicon.png?v=3">
+  <!-- Website ICON -->
+  <link rel="icon" type="image/png" href="/Images/Website-ICON/favicon.png?v=3">
 
   
   <!-- Bootstrap -->
@@ -12,7 +13,7 @@
 
   <!-- Layout CSS -->
   <link href="/Code/Layout/layout.css" rel="stylesheet">
-  <link href="/Code/Certificates/certificates.css" rel="stylesheet">
+  <link href="/Code/Certificates/certificates.css?v=controls-1" rel="stylesheet">
   <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   
   <!-- Page Background -->
@@ -38,12 +39,25 @@
  <section>
   <div>
     <h1 id="Certi-heading">Certificates</h1>
-    <div id="certificate-slider" class="certificate-slider">
-      <img src="../../Images/Certificates/certi1.png" alt="Certificate 1" class="active" />
-      <img src="../../Images/Certificates/certi2.png" alt="Certificate 2" />
-      <img src="../../Images/Certificates/certi3.png" alt="Certificate 3" />
-      <img src="../../Images/Certificates/Certificate-4.jpg" alt="Certificate 4" />
+    <div id="certificate-carousel">
+<div id="certificate-slider" class="certificate-slider">
+      <img src="/Images/Certificates/Certificate-1.png" alt="Certificate 1" class="active" />
+      <img src="/Images/Certificates/Certificate-2.png" alt="Certificate 2" />
+      <img src="/Images/Certificates/Certificate-3.jpg" alt="Certificate 3" />
+      <img src="/Images/Certificates/Certificate-4.png" alt="Certificate 4" />
+      <img src="/Images/Certificates/Certificate-5.png" alt="Certificate 5" />
+      <img src="/Images/Certificates/Certificate-6.png" alt="Certificate 6" />
+      <img src="/Images/Certificates/Certificate-7.png" alt="Certificate 7" />
+      <img src="/Images/Certificates/Certificate-8.png" alt="Certificate 8" />
+      <img src="/Images/Certificates/Certificate-9.png" alt="Certificate 9" />
+      <img src="/Images/Certificates/Certificate-10.png" alt="Certificate 10" />
     </div>
+    <div class="certificate-controls" role="group" aria-label="Certificate navigation">
+      <button id="certificate-prev" class="certificate-arrow" type="button" aria-label="Previous certificate" aria-controls="certificate-slider"><span aria-hidden="true">&#8592;</span></button>
+      <div id="certificate-dots" class="certificate-dots"></div>
+      <button id="certificate-next" class="certificate-arrow" type="button" aria-label="Next certificate" aria-controls="certificate-slider"><span aria-hidden="true">&#8594;</span></button>
+    </div>
+</div>
   </div>
 </section>
 
@@ -60,7 +74,7 @@
 
   <!-- Layout JS -->
   <script src="/Code/Layout/layout.js"></script>
-  <script src="/Code/Certificates/certificates.js"></script>
+  <script src="/Code/Certificates/certificates.js?v=controls-1"></script>
 
   <!-- Fetch shared layout -->
  <script>

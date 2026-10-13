@@ -107,3 +107,131 @@
   color: #333;
   margin-top: 30px;
 }
+
+/* NED placements: two branches rising on the right */
+.timeline {
+  padding-right: 0;
+}
+
+.timeline-icon {
+  flex-shrink: 0;
+}
+
+.ned-content {
+  position: static;
+  min-width: 0;
+}
+
+.ned-branches {
+  position: absolute;
+  left: 52%;
+  right: 0;
+  bottom: 23px;
+  height: 145px;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  border-left: 2px solid #0d6efd;
+}
+
+/* Curved elbow from the NED row to the branch trunk */
+.ned-branches::after {
+  content: "";
+  position: absolute;
+  left: -32px;
+  bottom: -2px;
+  width: 32px;
+  height: 22px;
+  border-bottom: 2px solid #0d6efd;
+  border-right: 2px solid #0d6efd;
+  border-bottom-right-radius: 18px;
+  background: transparent;
+}
+
+.ned-branch {
+  position: relative;
+  padding-left: 34px;
+}
+
+.ned-branch::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 25px;
+  height: 2px;
+  background: #0d6efd;
+}
+
+.ned-branch::after {
+  content: "";
+  position: absolute;
+  left: 21px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #0d6efd;
+}
+
+@media (min-width: 901px) {
+  .timeline > .timeline-item {
+    width: 53%;
+  }
+  .timeline > .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+  .timeline::before {
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .ned-branches {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    height: auto;
+    margin: 24px 0 0 12px;
+    gap: 24px;
+  }
+  .ned-branches::after {
+    display: none;
+  }
+}
+
+/* Connect the degree title to the trunk and add placement icons. */
+.ned-content { flex: 1; }
+.ned-title-line { display: flex; align-items: center; gap: 12px; }
+.ned-title-line h6 { line-height: 20px; }
+.ned-degree > p { line-height: 20px; }
+.ned-branch { padding-left: 52px; }
+.ned-branch::after { display: none; }
+.ned-branch-icon {
+  position: absolute;
+  left: 18px;
+  top: -5px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 14px;
+}
+@media (min-width: 901px) {
+  .timeline { padding-left: 0; }
+  .timeline > .timeline-item { margin-left: 40px; width: calc(53% - 40px); }
+  .timeline > .ned-item { width: calc(52% - 40px); }
+  .ned-title-line::after {
+    content: "";
+    flex: 1;
+    min-width: 20px;
+    border-top: 2px solid #0d6efd;
+  }
+  .ned-branches { bottom: 30px; }
+  .ned-branches::after { display: none; }
+}
