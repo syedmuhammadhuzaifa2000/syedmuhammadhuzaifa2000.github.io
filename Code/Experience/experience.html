@@ -26,6 +26,7 @@
       background-attachment: fixed;
     }
   </style>
+  <link href="/Code/Layout/responsive.css?v=mobile-1" rel="stylesheet">
 </head>
 
 <body>
@@ -118,11 +119,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Layout JS -->
-  <script src="/Code/Layout/layout.js"></script>
+  <script src="/Code/Layout/layout.js?v=mobile-1"></script>
 
   <!-- Load shared layout -->
   <script>
-    fetch("/Code/Layout/layout.html")
+    fetch("/Code/Layout/layout.html?v=mobile-1")
       .then(r => r.text())
       .then(html => {
         const temp = document.createElement("div");

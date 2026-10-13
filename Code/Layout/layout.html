@@ -1,6 +1,6 @@
 <!-- ================= TOP NAVBAR ================= -->
 <div class="top-navbar">
-  <button class="menu-btn" onclick="toggleSideNav()" aria-label="Toggle Navigation">
+  <button class="menu-btn" onclick="toggleSideNav()" aria-label="Toggle Navigation" aria-controls="sideNav" aria-expanded="false">
     <i class="fas fa-bars"></i>
   </button>
 
@@ -19,7 +19,7 @@
 </div>
 
 <!-- ================= SIDE NAVBAR ================= -->
-<div class="side-navbar" id="sideNav">
+<div class="side-navbar" id="sideNav" aria-label="Main navigation" aria-hidden="true" inert>
   <button class="close-btn" onclick="toggleSideNav()" aria-label="Close Navigation">
     <i class="fas fa-arrow-left"></i>
   </button>
@@ -30,6 +30,7 @@
   </div>
 
   <nav class="side-nav-links">
+    <a href="/Code/Home/home.html">Home</a>
     <a href="/Code/About/about.html">About Me</a>
    <a href="/Code/Experience/experience.html">Experience</a>
     <a href="/Code/Education/education.html">Education</a>

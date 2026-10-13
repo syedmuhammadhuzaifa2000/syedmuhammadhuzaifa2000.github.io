@@ -6,6 +6,10 @@ function initTypewriter() {
   const element = document.getElementById("typewriter");
 
   if (!element) return;
+  if (window.matchMedia("(max-width: 767px), (prefers-reduced-motion: reduce)").matches) {
+    element.textContent = text;
+    return;
+  }
 
   let index = 0;
   let isDeleting = false;

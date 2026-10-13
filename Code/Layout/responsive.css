@@ -1,0 +1,114 @@
+/* Shared responsive adjustments; loaded after page styles. */
+html { -webkit-text-size-adjust: 100%; }
+body { min-width: 0; }
+.page-content, .footer-content, .footer-section { min-width: 0; }
+.footer-section a { overflow-wrap: anywhere; }
+.footer-section li { align-items: flex-start; }
+.footer-section li > img { width: 16px; height: 16px; flex: 0 0 16px; margin-top: 4px; }
+.side-navbar { height: 100dvh; overflow-y: auto; overscroll-behavior: contain; visibility: hidden; }
+.side-navbar.open { visibility: visible; }
+.menu-btn, .close-btn { min-width: 44px; min-height: 44px; }
+.side-nav-links a { min-height: 44px; }
+.side-social { padding-top: 20px; }
+.side-social a { display: inline-flex; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; margin: 0; }
+.nav-backdrop { position: fixed; inset: 0; border: 0; background: rgba(0,0,0,.55); z-index: 1100; }
+.nav-backdrop[hidden] { display: none; }
+body.open-side-navbar { overflow: hidden; }
+body.open-side-navbar .top-navbar { display: flex; }
+body.open-side-navbar .footer { display: block; }
+.cnic-popup-content { max-width: calc(100vw - 32px); max-height: calc(100dvh - 32px); overflow-y: auto; }
+.project-item { min-width: 0; }
+.project-video video { display: block; max-width: 100%; }
+.close-video { width: 44px; height: 44px; }
+
+@media (max-width: 1000px) {
+  .top-nav-links { display: none; }
+  .top-navbar { height: 56px; padding: 0 12px; }
+  .menu-btn { margin-right: 6px; }
+  .side-navbar { width: min(300px, 88vw); left: -320px; }
+  .side-navbar.open { left: 0; }
+  .footer-content { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+  .experience-page { width: 100%; padding-left: 16px; padding-right: 16px; }
+}
+
+@media (max-width: 767px) {
+  body { background-attachment: scroll; }
+  .page-content { padding-top: 76px; }
+  .home-hero { min-height: calc(100svh - 76px); padding: 24px 16px 44px; }
+  .hero-card { padding: 28px 24px; border-radius: 18px; }
+  .hero-card h1 { font-size: clamp(1.75rem, 7.5vw, 2.5rem); line-height: 1.15; margin-bottom: 18px; }
+  .typewriter-line { font-size: 1rem; line-height: 1.65; margin-bottom: 0; }
+  .cursor { display: none; }
+  .hero-actions { gap: 12px; margin-top: 24px; }
+  .hero-actions .btn { flex: 1 1 140px; min-height: 46px; display: grid; place-items: center; }
+  .footer { padding: 32px 20px 24px; }
+  .footer-content { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .footer-section h3 { font-size: 1.2rem; }
+  .footer-section li { line-height: 1.6; }
+  .footer-section a { padding-block: 4px; }
+  .footer-bottom { line-height: 1.6; }
+  .about-card { width: calc(100% - 32px); margin: 0 16px 32px; padding: 24px 20px; }
+  .about-avatar { width: 120px; height: 120px; }
+  .about-summary, .about-footer-text { font-size: 1rem; line-height: 1.65; }
+  .timeline-content { min-width: 0; }
+  .timeline-content h6 { line-height: 1.5; }
+  .timeline-content p { line-height: 1.6; }
+  .ned-branches { margin-left: 0; }
+  .ned-branch { padding-left: 42px; }
+  .ned-branch-icon { left: 10px; }
+  .section-heading { font-size: 1.3rem; }
+  .education-wrapper { padding: 0 16px 40px; }
+  .edu-content { flex-direction: column-reverse; align-items: flex-start; gap: 24px; padding: 24px; min-height: 0; }
+  .edu-logo { width: 100px; max-width: 100%; align-self: center; }
+  .edu-text { min-width: 0; }
+  .edu-text h3 { font-size: 1.35rem; line-height: 1.35; }
+  .edu-text ul { padding-left: 20px; }
+  .edu-text li { margin-bottom: 10px; }
+  .experience-page { padding-bottom: 32px; }
+  .experience-card { padding: 22px 20px; margin-bottom: 16px; }
+  .experience-header { align-items: flex-start; gap: 12px; }
+  .experience-company { min-width: 0; gap: 10px; }
+  .company-logo { flex-shrink: 0; }
+  .experience-header h5 { font-size: 1rem; line-height: 1.4; }
+  .experience-header .badge { flex-shrink: 0; margin-top: 6px; }
+  .experience-card p { font-size: 1rem; }
+  .projects-page, .skills-page, .languages-page { padding: 80px 16px 40px; }
+  .projects-title, .skills-title, .languages-title, .education-title, .experience-title, #Certi-heading { font-size: 2rem; margin-bottom: 28px; }
+  .experience-title { font-size: clamp(1.6rem, 7vw, 2rem); }
+  .projects-grid { gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-item { padding: 24px 16px; }
+  .project-item.active { grid-column: 1 / -1; }
+  .project-item:hover { transform: none; }
+  .skills-title { color: #fff; }
+  .skill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .skill-group { margin-bottom: 36px; }
+  .skill-group h2 { font-size: 1.4rem; line-height: 1.4; }
+  .languages-grid { gap: 32px; }
+  .certificates-page { padding: 80px 16px 32px; }
+  #Certi-heading { padding-left: 0; text-align: center; }
+  .certificate-slider { height: auto; aspect-ratio: 3 / 2; }
+  .certificate-controls { gap: 4px; }
+  .certificate-dot { width: 24px; height: 44px; }
+  .certificate-arrow { width: 44px; }
+  #certificates { margin-bottom: 32px; }
+}
+
+/* Touch users can read both sides without depending on a hover gesture. */
+@media (hover: none), (max-width: 767px) {
+  .skill-card-inner, .skill-card:hover .skill-card-inner { height: auto; transform: none; transition: none; }
+  .skill-card-front, .skill-card-back { position: relative; transform: none; backface-visibility: visible; }
+  .skill-card-front { min-height: 110px; gap: 12px; border-radius: 16px 16px 0 0; padding: 20px 16px; }
+  .skill-card-front h3 { font-size: 1.15rem; margin: 0; }
+  .skill-card-front i { font-size: 30px; }
+  .skill-card-back { border-radius: 0 0 16px 16px; min-height: 140px; justify-content: flex-start; padding: 20px 24px; text-shadow: none; }
+  .skill-card-back ul { margin: 0; text-align: left; }
+}
+@media (max-width: 479px) {
+  .projects-grid, .skill-grid { grid-template-columns: minmax(0, 1fr); }
+  .skill-card-back { min-height: 0; }
+  .experience-header { flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .side-navbar, .project-item, .skill-card-inner { transition: none; }
+  .loading-dots span, .cursor { animation: none; }
+}

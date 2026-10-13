@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Languages | SM Huzaifa</title>
 
   <!-- Website ICON -->
@@ -24,6 +25,7 @@
       background-attachment: fixed;
     }
   </style>
+  <link href="/Code/Layout/responsive.css?v=mobile-1" rel="stylesheet">
 </head>
 
 <body>
@@ -95,10 +97,10 @@
 
 <div id="footer-container"></div>
 
-<script src="/Code/Layout/layout.js"></script>
+<script src="/Code/Layout/layout.js?v=mobile-1"></script>
 
 <script>
-  fetch("/Code/Layout/layout.html")
+  fetch("/Code/Layout/layout.html?v=mobile-1")
     .then(r => r.text())
     .then(html => {
       const temp = document.createElement("div");
